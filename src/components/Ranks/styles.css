@@ -1,0 +1,87 @@
+.list.ranks {
+}
+
+.list.ranks li {
+  flex-flow: row wrap;
+  height: unset;
+}
+
+.list.ranks li.linked {
+  cursor: pointer;
+}
+
+.list.ranks li {
+  display: grid;
+  align-items: center;
+  padding: 0 1rem;
+  grid-template-columns: 48px auto 80px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.list.ranks li .col:last-child {
+  text-align: right;
+}
+
+.list.ranks li .member-link {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.list.ranks li .member-link span {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem 0 0;
+  color: #fff;
+  background-color: #4CAF50;
+}
+
+.list.ranks li .member-link span.destiny-platform_pc {
+  background-color: #2196F3;
+}
+
+.list.ranks li .member-link span.destiny-platform_playstation {
+  background-color: #3F51B5;
+}
+
+.list.ranks li .triumphScore {
+  margin: 0 0 0 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1700px) {
+  .list.ranks li .basic {
+    grid-template-columns: calc(38px + 16px) 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .list.ranks li.grid-header {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .list.ranks li.grid-header {
+    display: none;
+  }
+  
+  .list.ranks li .basic {
+    grid-template-columns: calc(36px + 16px) auto auto;
+  }
+}

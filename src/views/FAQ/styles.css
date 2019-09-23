@@ -1,0 +1,113 @@
+#faq {
+  padding: 3rem;
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: 1fr;
+  align-content: start;
+}
+
+#faq .module {
+  
+}
+
+#faq .module.intro {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr 2fr;
+  align-content: start;
+}
+
+#faq .module.faq {
+  margin: 0 0 3rem;
+}
+
+#faq .module.faq .k {
+  position: relative;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr 2fr;
+  align-content: start;
+}
+
+#faq .module.faq .k .sticky {
+  position: sticky;
+  top: 3rem;
+  padding: 0 0 3rem;
+  font-size: 18px;
+}
+
+#faq .module.faq .qa {
+  max-width: 30rem;
+  margin: 0 0 3rem;
+}
+
+#faq .module.faq .qa .q {
+  font-size: 18px;
+  margin: 0 0 1rem;
+}
+
+#faq .module.faq .qa .a {
+  font-size: 14px;
+}
+
+#faq .module.faq .qa .a p {
+  line-height: 1.6;
+}
+
+#faq .module.faq .qa .a ul,
+#faq .module.faq .qa .a ol {
+  list-style-type: disc;
+  padding: 0 0 0 2rem;  
+  margin: 0 0 1rem;
+}
+
+#faq .module.faq .qa .a ol {
+  list-style-type: decimal;
+}
+
+#faq .module.faq .qa .a ul li,
+#faq .module.faq .qa .a ol li {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+#faq .module.faq .qa .a ol li {
+  line-height: 2;
+}
+
+#faq del {
+  text-decoration-color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+
+
+@media screen and (max-width: 1280px) {
+  #faq .module.intro {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #faq {
+    padding: 2rem;
+    grid-gap: 1rem;
+  }
+
+  #faq .module.faq {
+    margin: 0;
+  }
+
+  #faq .module.faq .k {
+    grid-template-columns: 4rem auto;
+    grid-gap: 0;
+  }
+
+  #faq .module.faq .k .sticky {
+    transform: rotate(90deg);
+    transform-origin: left top;
+    white-space: nowrap;
+    margin: 4px 0 0 20px;
+    padding: 0;
+  }
+}

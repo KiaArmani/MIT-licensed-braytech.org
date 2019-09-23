@@ -1,0 +1,20 @@
+{
+  "short_name": "Braytech",
+  "name": "Braytech",
+  "icons": [
+    {
+      "src": "/static/images/braytech-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/static/images/braytech-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/?utm_source=pwa",
+  "display": "standalone",
+  "theme_color": "#af1712",
+  "background_color": "#af1712"
+}

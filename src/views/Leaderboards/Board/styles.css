@@ -1,0 +1,61 @@
+#leaderboards.for {
+  padding: 4rem 3rem 3rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 3rem;
+}
+
+#leaderboards.for .content.head .button {
+  margin: 2rem 0 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1280px) {
+
+  
+
+}
+
+@media screen and (max-width: 1024px) {
+
+  
+
+}
+
+@media screen and (max-width: 768px) {
+
+  #leaderboards.for {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  #leaderboards.for {
+    padding: 3rem 2rem 2rem;
+  }
+
+  #leaderboards.for .position::before {
+    height: 80px;
+  }
+
+}

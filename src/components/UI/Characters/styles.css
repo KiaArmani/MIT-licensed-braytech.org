@@ -1,0 +1,222 @@
+.characters-list {
+  width: 474px;
+}
+
+.characters-list .list li {
+  display: block;
+  height: 0;
+  padding-bottom: calc(96 / 474 * 100%);
+  margin: 0 0 16px;
+  color: #fff;
+}
+
+.characters-list .list li::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  pointer-events: none;
+  background-color: initial;
+  margin: initial;
+  box-shadow: inset 0 0 0 1px rgba(214, 214, 214, 0);
+  transition: background-color 0.25s, box-shadow 0.25s;
+}
+
+.characters-list .list li .image.emblem {
+  background-size: cover;
+}
+
+.characters-list .list li .image.emblem::before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.characters-list .list li .image.emblem.missing {
+  width: calc(96 / 474 * 100% - 50px);
+  height: calc(100% - 50px);
+  top: 18px;
+  left: 18px;
+  background-size: contain;
+}
+
+.characters-list .list li.linked:hover .image.emblem::before {
+  opacity: 0.2;
+}
+
+.characters-list .list li .class {
+  position: absolute;
+  left: 88px;
+  top: 15px;
+  font-size: 27px;
+}
+
+.characters-list .list li .species {
+  position: absolute;
+  left: 88px;
+  top: 52px;
+  font-size: 16px;
+  opacity: 0.4;
+}
+
+.characters-list .list li .light {
+  position: absolute;
+  right: 12px;
+  top: 13px;
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 1;
+  color: #2ed1c9;
+}
+
+.characters-list .list li .light::before {
+  content: 'l';
+  position: absolute;
+  top: 4px;
+  left: -16px;
+  font-family: 'destiny' !important;
+  speak: none;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.characters-list .list li .level {
+  position: absolute;
+  right: 12px;
+  top: 51px;
+  font-size: 18px;
+}
+
+.characters-list .list li .progress {
+  position: absolute;
+  left: 2px;
+  bottom: 2px;
+  height: 11px;
+  width: calc(100% - 4px);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.characters-list .list li .progress .bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #5aa366;
+}
+
+.characters-list .list li .progress .bar.capped {
+  background-color: #c68b15;
+}
+
+
+.characters-list.responsive {
+  width: 100%;
+  height: 0;
+  padding-bottom: calc(96 / 474 * 100%);
+}
+
+.characters-list.responsive .list li .image.emblem.missing {
+  width: calc(96 / 474 * 100% - 37px);
+  height: calc(100% - 35px);
+  top: 14px;
+  left: 14px;
+}
+
+.characters-list.responsive .list li .class {
+  left: 20%;
+  top: 14%;
+  font-size: 18px;
+}
+
+.characters-list.responsive .list li .species {
+  left: 20%;
+  top: 53%;
+  font-size: 13px;
+}
+
+.characters-list.responsive .list li .light {
+  top: 10%;
+  right: 2%;
+  font-size: 26px;
+}
+
+.characters-list.responsive .list li .light::before {
+  font-size: 11px;
+  left: -12px;
+}
+
+.characters-list.responsive .list li .level {
+  top: 51%;
+  right: 2%;
+  font-size: 14px;
+}
+
+.characters-list.responsive .list li .progress {
+  height: 7px;
+}
+
+
+
+
+
+@media screen and (max-width: 600px) {
+  .characters-list {
+    width: 100%;
+    height: 0;
+    padding-bottom: calc(96 / 474 * 100%);
+  }
+
+  .characters-list .list li .image.emblem.missing {
+    width: calc(96 / 474 * 100% - 37px);
+    height: calc(100% - 35px);
+    top: 14px;
+    left: 14px;
+  }
+
+  .characters-list .list li .class {
+    left: 20%;
+    top: 14%;
+    font-size: 18px;
+  }
+
+  .characters-list .list li .species {
+    left: 20%;
+    top: 53%;
+    font-size: 13px;
+  }
+
+  .characters-list .list li .light {
+    top: 10%;
+    right: 2%;
+    font-size: 26px;
+  }
+
+  .characters-list .list li .light::before {
+    font-size: 11px;
+    left: -12px;
+  }
+
+  .characters-list .list li .level {
+    top: 51%;
+    right: 2%;
+    font-size: 14px;
+  }
+
+  .characters-list .list li .progress {
+    height: 7px;
+  }
+}

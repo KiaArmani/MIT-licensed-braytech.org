@@ -1,0 +1,16 @@
+#data-inspector {
+  padding: 4rem 3rem 3rem;
+  display: grid;
+}
+
+.wrapper:not(.dark-mode) #data-inspector {
+  background-color: #eee;
+}
+
+#data-inspector > ul {
+  background-color: transparent !important;
+}
+
+#data-inspector > ul img {
+  max-width: 200px;
+}

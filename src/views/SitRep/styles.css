@@ -1,0 +1,183 @@
+#sit-rep {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 3rem;
+  padding: 4rem 3rem 3rem;
+}
+
+#sit-rep .head {
+  grid-column: 1/4;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 3rem;
+}
+
+#sit-rep .head .page-header {
+  margin-bottom: 1rem;
+}
+
+#sit-rep .module.ranks .mode {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  grid-gap: 1rem;
+  margin: 0 0 2rem;
+}
+
+#sit-rep .module.ranks .mode .rank-image-set {
+  position: relative;
+  padding-bottom: 100%;
+}
+
+#sit-rep .module.ranks .mode .rank-image-set .image.rank {
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+}
+
+#sit-rep .module.ranks .mode .properties {
+  display: grid;
+  align-content: center;
+}
+
+#sit-rep .module.ranks .mode .properties .text {
+  margin: 0 0 1rem;
+}
+
+#sit-rep .module.ranks .mode .properties .text .name {
+  font-size: 18px;
+}
+
+#sit-rep .module.ranks .mode .properties .text .resets {
+  font-size: 16px;
+}
+
+#sit-rep .module.rare-gear .collection-items {
+  grid-template-columns: 1fr 1fr;
+}
+
+#sit-rep .module.rare-gear .collection-items li {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: rgba(255, 255, 255, 0.4);
+}
+
+#sit-rep .module.rare-gear .collection-items li.completed {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#sit-rep .module.rare-gear .collection-items li .image.dl {
+  opacity: 0.4;
+}
+
+#sit-rep .module.rare-gear .collection-items li.completed .image.dl {
+  opacity: 1;
+}
+
+#sit-rep .module.rare-gear .collection-items li:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 1);
+}
+
+#sit-rep .module.milestones .list li {
+  display: block;
+  height: unset;
+  padding: 1rem;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+#sit-rep .module.milestones .list li.well-rested {
+  background-color: rgba(90, 163, 102, 0.15);
+  box-shadow: inset 0 0 0 2px #5aa366;
+}
+
+#sit-rep .module.milestones .list li.earned {
+  box-shadow: inset 0 0 0 2px #7bdcc1;
+  background-color: rgba(123, 220, 193, 0.2);
+}
+
+#sit-rep .module.milestones .list li > .text {
+  position: relative;
+  font-size: 14px;
+  margin: 6px 8px 0 8px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#sit-rep .module.milestones .list li .progress-bar .bar {
+  position: unset;
+  background-color: transparent;
+}
+
+#sit-rep .module.milestones .list li .progress-bar .bar .text {
+  position: relative;
+}
+
+#sit-rep .module.milestones .list li .progress-bar .bar .text .description {
+  font-weight: 500;
+  font-family: 'nhg text';
+}
+
+#sit-rep .module.milestones .list li .progress-bar .bar .fill {
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 4px;
+  top: unset;
+  bottom: 0;
+}
+
+#sit-rep .module.milestones .list li .reward {
+  margin: 10px 8px 0 8px;
+  display: grid;
+  grid-template-columns: 20px auto;
+  grid-gap: 6px;
+  align-items: center;
+}
+
+#sit-rep .module.milestones .list li .reward .image {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+#sit-rep .module.milestones .list li .reward .name {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#sit-rep .module.clan-roster {
+  position: relative;
+}
+
+#sit-rep .module.clan-roster .refresh {
+  position: absolute;
+  left: -2rem;
+}
+
+
+@media screen and (max-width: 1280px) {
+  #sit-rep {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #sit-rep .head {
+    grid-column: 1/3;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #sit-rep {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    padding: 3rem 2rem 2rem;
+  }
+
+  #sit-rep .head {
+    grid-column: 1/2;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+
+  #sit-rep .module.rare-gear .collection-items {
+    grid-template-columns: 1fr;
+  }
+}

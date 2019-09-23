@@ -1,0 +1,92 @@
+#experiments {
+  margin: -40px 0 0;
+  width: 100%;
+  padding: 0;
+  display: grid;
+}
+
+#experiments > .module.head {
+  padding: calc(4rem + 40px) 3rem 3rem;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+#experiments .module.head .text p {
+  font-size: 14px;
+  max-width: 500px;
+}
+
+#experiments .module.head .text p:first-child {
+  font-size: 16px;
+}
+
+#experiments .module .tools {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+#experiments .module .tool {
+  max-width: 500px;
+}
+
+#experiments .module .tool a {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: calc(48px + 16px) auto;
+  font-size: 14px;
+}
+
+#experiments .module .tool a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#experiments .module .tool .icon {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+  font-size: 20px;
+}
+
+#experiments .module .tool .text {
+  
+}
+
+#experiments .module .tool .text .name {
+  font-weight: 500;
+  display: block;
+  margin: 0 0 4px;
+}
+
+#experiments .module .tool .text .name span.destiny-external {
+  margin: 0 0 0 6px;
+  opacity: 0.6;
+}
+
+#experiments .module .tool .text .author {
+  margin: 0 0 10px;
+}
+
+#experiments .module .tool .text .description {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+
+
+@media screen and (max-width: 1200px) {
+  
+}
+
+@media screen and (max-width: 600px) {
+  #experiments > .module.head {
+    padding: calc(3rem + 40px) 2rem 2rem;
+  }
+
+  #experiments .module .tools {
+    padding: 1rem;
+  }
+  
+}

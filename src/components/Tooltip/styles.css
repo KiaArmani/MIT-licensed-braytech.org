@@ -1,0 +1,650 @@
+#tooltip {
+  position: fixed;
+  width: 384px;
+  pointer-events: none;
+  z-index: 2000;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  line-height: 1;
+  --background-body: 238, 238, 238;
+  --dark: 0, 0, 0;
+  --light: 255, 255, 255;
+  --accent: 0, 0, 255;
+  --exotic: 48, 61%, 50%;
+  --legendary: 279, 36%, 29%;
+  --rare: 213, 34%, 48%;
+  --uncommon: 126, 35%, 32%;
+  --common: 0, 0%, 80%;
+  --exoticDark: 48, 71%, 5%;
+  --legendaryDark: 279, 36%, 5%;
+  --rareDark: 213, 34%, 6%;
+  --uncommonDark: 126, 35%, 5%;
+  --commonDark: 0, 0%, 7%;
+}
+
+#tooltip .acrylic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: brightness(1.2) blur(2px);
+}
+
+#tooltip .frame {
+  position: relative;
+}
+
+#tooltip .header {
+  padding: 12px 16px 10px;
+  margin: 0;
+  background-color: hsla(var(--common), 0.9);
+  color: #fff;
+  font-family: 'nhg text';
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#tooltip .header > div {
+  flex-basis: 100%;
+  display: flex;
+}
+
+#tooltip .header div div {
+  flex: 1 1 auto;
+}
+
+#tooltip .header .name {
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 0 4px;
+}
+
+#tooltip .header .kind {
+  opacity: 0.8;
+}
+
+#tooltip .header .rarity {
+  opacity: 0.4;
+  text-align: right;
+}
+
+#tooltip .frame .note {
+  padding: 6px 16px;
+  background-color: rgba(156, 53, 51, 0.8);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+#tooltip .black {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+#tooltip .black .image.screenshot {
+  position: relative;
+  height: unset;
+  padding-bottom: 56%;
+}
+
+#tooltip .damage {
+  padding: 12px 16px 10px;
+  color: #fff;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#tooltip .damage .power {
+  font-size: 32px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  padding: 0 16px 0 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#tooltip .damage .power .text {
+  font-size: 40px;
+}
+
+#tooltip .damage .power:not(.kinetic) .text {
+  padding: 0 0 0 7px;
+}
+
+#tooltip .damage .power .icon {
+  display: flex;
+}
+
+#tooltip .damage .power .icon::before {
+  font-family: 'destiny';
+}
+
+#tooltip .damage .power.solar {
+  color: #ef641f;
+}
+
+#tooltip .damage .power .icon.solar::before {
+  content: 's';
+}
+
+#tooltip .damage .power.arc {
+  color: #79bbe7;
+}
+
+#tooltip .damage .power .icon.arc::before {
+  content: 'a';
+}
+
+#tooltip .damage .power.void {
+  color: #a371c2;
+}
+
+#tooltip .damage .power .icon.void::before {
+  content: 'v';
+}
+
+#tooltip .damage.armour .power {
+  border-right: none;
+}
+
+#tooltip .damage.armour .power .text {
+  padding: 0;
+  line-height: 1;
+}
+
+#tooltip .damage.armour .power .text:last-child {
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 0 0 0 16px;
+  line-height: 0;
+}
+
+#tooltip .damage .slot {
+  padding: 0 0 0 16px;
+  display: flex;
+  align-items: center;
+}
+
+#tooltip .damage .slot .icon {
+  font-size: 32px;
+  display: flex;
+}
+
+#tooltip .damage .slot .icon::before {
+  font-family: 'destiny';
+}
+
+#tooltip .damage .slot .icon.primary::before {
+  content: 'P';
+}
+
+#tooltip .damage .slot .icon.special::before {
+  content: 'S';
+  color: #84f186;
+}
+
+#tooltip .damage .slot .icon.heavy::before {
+  content: 'H';
+  color: #a981fc;
+}
+
+#tooltip .damage .slot .text {
+  padding: 0 0 0 10px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+#tooltip .source {
+  padding: 12px 16px 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-style: italic;
+  font-size: 14px;
+  letter-spacing: 0.8px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#tooltip .source.no-border {
+  border-top: none;
+}
+
+#tooltip .kill-tracker {
+  padding: 2px 16px 12px;
+  display: flex;
+}
+
+#tooltip .kill-tracker .icon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  flex-basis: 20px;
+  background-size: contain;
+}
+
+#tooltip .kill-tracker .text {
+  flex-basis: calc(100% - 20px);
+  padding: 0 0 0 16px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+#tooltip .kill-tracker .text .description {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#tooltip .kill-tracker .text .value {
+  color: #c6ab3c;
+  text-align: right;
+}
+
+#tooltip .stats {
+  padding: 14px 16px 6px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#tooltip .stats .stat {
+  display: flex;
+  align-items: center;
+  line-height: 1.6;
+  margin: 0 0 8px;
+}
+
+#tooltip .stats .stat .name {
+  color: rgba(255, 255, 255, 0.6);
+  padding: 0 16px 0 0;
+  flex-basis: 45%;
+  height: 16px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#tooltip .stats .stat .value {
+  flex-basis: 55%;
+  height: 16px;
+  position: relative;
+  color: #fff;
+  display: flex;
+}
+
+#tooltip .stats .stat .value.bar {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+#tooltip .stats .stat .value.int {
+  display: flex;
+  align-items: center;
+}
+
+#tooltip .stats .stat .value.masterwork {
+  color: #c6ab3c;
+}
+
+#tooltip .stats .stat .value .bar {
+  height: 100%;
+  background-color: #fff;
+  position: relative;
+}
+
+#tooltip .stats .stat .value .bar::before {
+  content: attr(data-value);
+  position: absolute;
+  top: 0;
+  right: -16px;
+  width: 100%;
+  height: 100%;
+  font-weight: 400;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  opacity: 0;
+}
+
+#tooltip .stats .stat .value .tip {
+  height: 100%;
+  background-color: #c6ab3c;
+}
+
+#tooltip .sockets {
+  display: none;
+}
+
+#tooltip .sockets.has-sockets {
+  display: block;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0 0 12px;
+}
+
+#tooltip .plug {
+  padding: 12px 16px 0;
+  display: flex;
+  opacity: 0.4;
+}
+
+#tooltip .plug.is-active {
+  opacity: 1;
+}
+
+#tooltip .plug.ellipsis {
+  opacity: 1;
+}
+
+#tooltip .plug .icon {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  flex-basis: 40px;
+  background-size: contain;
+}
+
+#tooltip .plug .text {
+  flex-basis: calc(100% - 56px);
+  padding: 0 0 0 16px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+#tooltip .plug .text .name {
+  margin: 0 0 3px;
+  flex-basis: 100%;
+}
+
+#tooltip .plug .text .description {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+
+#tooltip .sockets.detailed-mode .group {
+  padding: 0 0 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#tooltip .sockets.detailed-mode .group:last-child {
+  padding: 0;
+  border-bottom: none;
+}
+
+#tooltip .sockets.detailed-mode .plug .icon {
+  width: 20px;
+  height: 20px;
+  flex-basis: 20px;
+}
+
+#tooltip .sockets.detailed-mode .plug .text .name {
+  margin: 0;
+}
+
+#tooltip .sockets.detailed-mode .plug .text .description {
+  display: none;
+}
+
+#tooltip .intrinsic {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 12px 16px 10px;
+}
+
+#tooltip .frame.exotic .intrinsic .text .name {
+  color: hsla(var(--exotic), 1);
+}
+
+#tooltip .description pre {
+  padding: 16px 16px 12px;
+  white-space: pre-wrap;
+  line-height: 1.4;
+  font-style: italic;
+  font-size: 14px;
+  letter-spacing: 0.8px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#tooltip .frame.mod .description pre,
+#tooltip .frame.ui .description pre {
+  padding: 12px 16px 12px;
+  font-style: unset;
+  letter-spacing: unset;
+}
+
+#tooltip .frame.mod .description.has-stats pre,
+#tooltip .frame.ui .description.has-stats pre {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#tooltip .frame.ui .stats {
+  border-top: none;
+}
+
+#tooltip .frame .image.emblem {
+  position: relative;
+  height: initial;
+  padding-bottom: calc(96 / 474 * 100%);
+}
+
+#tooltip .frame.exotic .header {
+  background-color: hsla(var(--exotic), 0.9);
+}
+
+#tooltip .frame.exotic .black {
+  background-color: hsla(var(--exoticDark), 0.9);
+}
+
+#tooltip .frame.legendary .header {
+  background-color: hsla(var(--legendary), 0.9);
+}
+
+#tooltip .frame.legendary .black {
+  background-color: hsla(var(--legendaryDark), 0.9);
+}
+
+#tooltip .frame.rare .header {
+  background-color: hsla(var(--rare), 0.9);
+}
+
+#tooltip .frame.rare .black {
+  background-color: hsla(var(--rareDark), 0.9);
+}
+
+#tooltip .frame.uncommon .header {
+  background-color: hsla(var(--uncommon), 0.9);
+}
+
+#tooltip .frame.uncommon .black {
+  background-color: hsla(var(--uncommonDark), 0.9);
+}
+
+#tooltip .frame.common .header {
+  background-color: hsla(var(--common), 0.9);
+  color: #000;
+}
+
+#tooltip .frame.common .black {
+  background-color: hsla(var(--commonDark), 0.9);
+}
+
+#tooltip .frame.bounty .header {
+  background-color: hsla(var(--commonDark), 0.7);
+  color: #fff;
+}
+
+#tooltip .frame.ui .header {
+  background-color: hsla(0, 0%, 0%, 0.9);
+  border-top: 5px solid rgba(214, 214, 214, 0.8);
+  color: #fff;
+}
+
+#tooltip .frame.ui .black {
+  background-color: hsla(0, 0%, 10%, 0.9);
+}
+
+#tooltip .frame .objective {
+  padding: 16px 16px 12px;
+  white-space: pre-wrap;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.4;
+  font-style: italic;
+  font-size: 14px;
+  letter-spacing: 0.8px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#tooltip .frame .objectives {
+  padding: 0 16px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#tooltip .frame .objectives .progress {
+  margin: 0 0 3px;
+}
+
+#tooltip .frame .objectives .progress:last-child {
+  margin: 0;
+}
+
+#tooltip .frame .rewards {
+  padding: 8px 16px 12px;
+  font-size: 14px;
+}
+
+#tooltip .frame .rewards::before {
+  content: 'REWARDS:';
+  display: block;
+  margin: 0 0 10px;
+  font-weight: 500;
+  color: hsla(126, 35%, 50%, 1);
+}
+
+#tooltip .frame .rewards ul li {
+  display: flex;
+  align-items: center;
+  margin: 0 0 8px;
+}
+
+#tooltip .frame .rewards ul li:last-child {
+  margin: 0;
+}
+
+#tooltip .frame .rewards ul li .icon {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  margin: 0 10px 0 0;
+}
+
+#tooltip .frame.ui.name-only .header .name {
+  margin: 0;
+}
+
+#tooltip .frame.ui.sandbox-perk .black .perk {
+  padding: 12px 16px;
+  display: grid;
+  grid-template-columns: 32px auto;
+  grid-gap: 16px;
+}
+
+#tooltip .frame.ui.sandbox-perk .black .perk .image.icon {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+#tooltip .frame.ui.sandbox-perk .black .perk .description {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+#tooltip .header::before {
+  content: attr(data-debugtip);
+  position: absolute;
+  top: -22px;
+  right: 0;
+  font-size: 14px;
+}
+
+#tooltip .frame.is-masterworked .header {
+  position: relative;
+}
+
+#tooltip .frame.is-masterworked .image.bg {
+  background-size: cover;
+  background-position: center top;
+}
+
+#tooltip .frame.is-masterworked .image.bg::before,
+#tooltip .frame.is-masterworked .image.bg::after {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  animation: animation-masterwork-header 5s linear infinite;
+}
+
+@keyframes animation-masterwork-header {
+  0% {
+    background-position-x: 200%;
+  }
+  20% {
+    background-position-x: -200%;
+  }
+  100% {
+    background-position-x: -200%;
+  }
+}
+
+#tooltip .frame.is-masterworked .image.bg::before {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  background-size: 200%;
+  background-repeat: no-repeat;
+  padding-bottom: 1.1%;
+  top: 0;
+}
+
+#tooltip .frame.is-masterworked .image.bg::after {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  background-size: 200%;
+  background-repeat: no-repeat;
+  padding-bottom: 16.8%;
+  bottom: 0;
+}
+
+#tooltip .frame.is-masterworked.exotic .image.bg::after {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+  background-size: 200%;
+  background-repeat: no-repeat;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  #tooltip {
+    top: 0 !important;
+    left: 0 !important;
+    width: 100%;
+    height: 100%;
+    pointer-events: initial;
+    box-shadow: none;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #tooltip .window {
+    margin: 32px;
+    position: relative;
+  }
+
+  #tooltip .frame {
+    position: relative;
+    padding: initial;
+    width: 100%;
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.4);
+  }
+}

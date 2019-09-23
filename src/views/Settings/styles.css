@@ -1,0 +1,56 @@
+#settings {
+  padding: 0;
+  display: grid;
+  margin: -40px auto 0;
+  width: 100%;
+}
+
+#settings > .module.head {
+  padding: calc(4rem + 40px) 3rem 3rem;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+#settings > .padder {
+  width: 100%;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 3rem;
+}
+
+@media screen and (max-width: 1500px) {
+  #settings > .padder {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #settings > .padder {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #settings > .module.head {
+    padding: calc(3rem + 40px) 2rem 2rem;
+  }
+
+  #settings > .padder {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem;
+    padding: 2rem;
+  }
+}
+
+
+
+#settings .module .list.settings li {
+  height: unset;
+  padding: 5px 0;
+  margin: 0 0 7px;
+}
+
+#settings .module .list.settings li .check-box {
+  width: 100%;
+}
+

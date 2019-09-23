@@ -1,0 +1,15 @@
+version: '3.5'
+
+services:
+  braytech_org:
+    container_name: braytech_org
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/usr/src/app'
+      - '/usr/src/app/node_modules'
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=developement

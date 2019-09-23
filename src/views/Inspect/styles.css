@@ -1,0 +1,485 @@
+#inspect {
+  position: relative;
+  display: block;
+  margin: -40px auto 0;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.8);
+  --exotic: 48, 61%, 50%;
+  --legendary: 279, 36%, 29%;
+  --rare: 213, 34%, 48%;
+  --uncommon: 126, 35%, 32%;
+  --common: 0, 0%, 80%;
+  --exoticDark: 48, 71%, 5%;
+  --legendaryDark: 279, 36%, 5%;
+  --rareDark: 213, 34%, 6%;
+  --uncommonDark: 126, 35%, 5%;
+  --commonDark: 0, 0%, 7%;
+}
+
+#inspect .grid {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 27rem auto;
+  align-items: stretch;
+  min-height: calc(100vh - 66px);
+  min-height: 100vh;
+}
+
+#inspect .col {
+  position: relative;
+  padding: 40px 0 0;
+}
+
+#inspect .displayProperties .rarity {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#inspect .displayProperties .rarity.exotic {
+  background-color: hsla(var(--exotic), 1);
+}
+
+#inspect .displayProperties .rarity.legendary {
+  background-color: hsla(var(--legendary), 1);
+}
+
+#inspect .displayProperties .rarity.rare {
+  background-color: hsla(var(--rare), 1);
+}
+
+#inspect .displayProperties .rarity.uncommon {
+  background-color: hsla(var(--uncommon), 1);
+}
+
+#inspect .displayProperties .rarity.basic {
+  background-color: hsla(var(--common), 0.8);
+}
+
+#inspect .displayProperties .text {
+  margin: 4rem 0 0 3rem;
+  position: relative;
+  font-family: 'nhg text';
+  overflow: hidden;
+}
+
+#inspect .displayProperties .text .name {
+  font-family: 'nhg text';
+  font-size: 56px;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1;
+  color: rgba(255, 255, 255, 1);
+  margin: 0 0 1rem;
+}
+
+#inspect .displayProperties .text .type {
+  font-size: 24px;
+  text-transform: uppercase;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 3rem;
+}
+
+#inspect .displayProperties .text .description {
+  font-size: 18px;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 0 3rem 0 0;
+  margin: 0 0 3rem;
+}
+
+#inspect .displayProperties .text .primary-stat {
+  padding: 0 16px 0 0;
+  display: grid;
+  grid-template-columns: min-content max-content;
+  grid-gap: 6px;
+}
+
+#inspect .displayProperties .text .primary-stat .damageType {
+  font-size: 40px;
+}
+
+#inspect .displayProperties .text .primary-stat .damageType:not(.kinetic) .text {
+  padding: 0 0 0 7px;
+}
+
+#inspect .displayProperties .text .primary-stat .damageType .icon {
+  display: flex;
+}
+
+#inspect .displayProperties .text .primary-stat .damageType .icon::before {
+  font-family: 'destiny';
+  content: 'k';
+}
+
+#inspect .displayProperties .text .primary-stat .damageType.solar {
+  color: #ef641f;
+}
+
+#inspect .displayProperties .text .primary-stat .damageType .icon.solar::before {
+  content: 's';
+}
+
+#inspect .displayProperties .text .primary-stat .damageType.arc {
+  color: #79bbe7;
+}
+
+#inspect .displayProperties .text .primary-stat .damageType .icon.arc::before {
+  content: 'a';
+}
+
+#inspect .displayProperties .text .primary-stat .damageType.void {
+  color: #a371c2;
+}
+
+#inspect .displayProperties .text .primary-stat .damageType .icon.void::before {
+  content: 'v';
+}
+
+#inspect .displayProperties .text .primary-stat .text {
+  margin: 0;
+}
+
+#inspect .displayProperties .text .primary-stat .text .power {
+  font-size: 54px;
+  font-weight: 500;
+  line-height: 40px;
+}
+
+#inspect .displayProperties .text .primary-stat .text .primaryBaseStat {
+  margin: 8px 0 0;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+#inspect .details {
+  padding: calc(40px + 4rem) 3rem 3rem;
+  width: calc((85px * 6) - 20px + 6rem);
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7px);
+}
+
+#inspect .details .socket-bros {
+  
+}
+
+#inspect .details .sockets {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 0 2rem;
+}
+
+#inspect .details .sockets.is-perks {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='19' height='19' viewBox='0 0 19 19'><rect fill='white' fill-opacity='0.1' width='19' height='1' y='9'/><rect fill='white' fill-opacity='0.1' width='1' height='19' x='9'/></svg>");
+}
+
+#inspect .details .sockets .socket {
+  position: relative;
+  flex-basis: 64px;
+  margin: 0 10px;
+}
+
+#inspect .details .sockets .socket:first-child {
+  margin-left: 0;
+}
+
+#inspect .details .sockets .socket:last-child {
+  margin-right: 0;
+}
+
+#inspect .details .sockets .socket .plug {
+  position: relative;
+  height: 64px;
+  margin: 0 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#inspect .details .sockets .socket .plug:last-child {
+  margin: 0;
+}
+
+#inspect .details .sockets .socket .plug .text {
+  display: none;
+}
+
+#inspect .details .sockets.is-perks .socket::before {
+  content: ' ';
+  position: absolute;
+  right: -11px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#inspect .details .sockets.is-perks .socket:last-child::before {
+  content: none;
+}
+
+#inspect .details .sockets.is-perks .socket .plug:not(.is-intrinsic) {
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.4);
+  border-radius: 100%;
+}
+
+#inspect .details .sockets.is-perks .socket .plug:not(.is-intrinsic)::before {
+  content: ' ';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  border-radius: 100%;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0);
+  transition: box-shadow 0.25s;
+}
+
+#inspect .details .sockets.is-perks .socket .plug:not(.is-intrinsic)::after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  transition: background-color 0.25s;
+}
+
+#inspect .details .sockets.is-perks .socket .plug:not(.is-intrinsic):hover::before {
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+#inspect .details .sockets.is-perks .socket .plug:not(.is-intrinsic):hover::after {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#inspect .details .sockets.is-perks .socket .plug:not(.is-intrinsic).is-active {
+  background-color: #518dba;
+}
+
+#inspect .details .sockets.is-perks .socket .plug:not(.is-intrinsic) .icon {
+  position: relative;
+  width: 48px;
+  height: 48px;
+}
+
+#inspect .details .sockets .socket .plug.is-intrinsic {
+  transition: transform 0.25s;
+}
+
+#inspect .details .sockets .socket .plug.is-intrinsic:hover {
+  transform: scale(1.1);
+}
+
+#inspect .details .sockets.is-mods .socket {
+  margin: 0 4px;
+}
+
+#inspect .details .sockets.is-mods .socket:first-child {
+  margin-left: 0;
+}
+
+#inspect .details .sockets.is-mods .socket .plug:not(.is-active):not(:first-child) {
+  display: none;
+}
+
+#inspect .details .sockets.is-mods .socket .plug:not(.is-intrinsic)::before {
+  content: ' ';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0);
+  transition: box-shadow 0.25s;
+}
+
+#inspect .details .sockets.is-mods .socket .plug:not(.is-intrinsic)::after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: inset 0 0 0 2px rgb(162, 162, 162);
+  transition: box-shadow 0.25s, background-color 0.25s;
+}
+
+#inspect .details .sockets.is-mods .socket .plug:not(.is-intrinsic):hover::before {
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+#inspect .details .sockets.is-mods .socket .plug:not(.is-intrinsic):hover::after {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+#inspect .details .stats {
+  
+}
+
+#inspect .details .stats .stat {
+  display: flex;
+  align-items: center;
+  line-height: 1.6;
+  margin: 0 0 8px;
+}
+
+#inspect .details .stats .stat .name {
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0 16px 0 0;
+  flex-basis: 40%;
+  height: 16px;
+  font-size: 16px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#inspect .details .stats .stat .value {
+  flex-basis: 60%;
+  height: 16px;
+  font-size: 18px;
+  position: relative;
+  color: #fff;
+  display: flex;
+}
+
+#inspect .details .stats .stat .value.bar {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#inspect .details .stats .stat .value.int {
+  display: flex;
+  align-items: center;
+}
+
+#inspect .details .stats .stat .value.masterwork {
+  color: #c6ab3c;
+}
+
+#inspect .details .stats .stat .value .bar {
+  height: 100%;
+  background-color: #fff;
+  position: relative;
+}
+
+#inspect .details .stats .stat .value .bar::before {
+  content: attr(data-value);
+  position: absolute;
+  top: 0;
+  right: -16px;
+  width: 100%;
+  height: 100%;
+  font-weight: 400;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  opacity: 0;
+}
+
+#inspect .details .stats .stat .value .tip {
+  height: 100%;
+  background-color: #c6ab3c;
+}
+
+#inspect .image.screenshot {
+  position: absolute;
+  top: 0;
+  left: 27rem;
+  width: calc(100% - 27rem);
+  background-size: cover;
+  background-position-x: right;
+}
+
+#inspect.lore-open .details .socket-bros,
+#inspect.lore-open .details .stats {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#inspect .lore {
+  position: absolute;
+  top: calc(40px + 4rem);
+  left: 0;
+  width: 100%;
+  height: calc(100% - (40px + 4rem));
+  padding: 0 3rem 3rem;
+  overflow-y: auto;
+  font-size: 18px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#inspect .lore pre {
+  white-space: pre-wrap;
+  padding: 1rem 0 3rem;
+  border-top: 2px solid rgba(255, 255, 255, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+#inspect.lore-open .lore {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+
+  #inspect .grid {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: unset;
+    min-height: unset;
+  }
+
+  #inspect .displayProperties .text {
+    margin: 4rem 3rem 3rem 3rem;
+  }
+
+  #inspect .details {
+    padding: 3rem;
+    width: 100%;
+    backdrop-filter: unset;
+  }
+
+  #inspect .image.screenshot {
+    position: relative;
+    top: unset;
+    left: unset;
+    width: 100%;
+    height: unset;
+    padding-bottom: 56%;
+    background-size: cover;
+    background-position-x: center;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  #inspect .grid {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: unset;
+    min-height: unset;
+  }
+
+  #inspect .displayProperties .text {
+    margin: 3rem 2rem 2rem 2rem;
+  }
+
+  #inspect .details {
+    padding: 2rem;
+  }
+
+}

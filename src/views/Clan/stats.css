@@ -1,0 +1,188 @@
+#clan .stats {
+  display: grid;
+  padding: 4rem 3rem 3rem;
+  grid-gap: 3rem;
+  grid-template-columns: 1.6fr 5.6fr;
+}
+
+#clan .views .list li.child {
+  margin-left: 1rem;
+}
+
+#clan .stats .collation .data {
+  display: grid;
+  margin: 2rem 0 0;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#clan .stats .collation .data .point {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, min-content);
+}
+
+#clan .stats .collation .data .point .header {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, min-content);
+  padding: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 0 0 1rem;
+}
+
+#clan .stats .collation .data .point.hasIcon {
+  display: grid;
+  grid-template-columns: calc(72px + 1rem) 1fr;
+  grid-template-rows: repeat(2, min-content);
+}
+
+#clan .stats .collation .data .point.hasIcon .header {
+  grid-column: 1/3;
+  display: grid;
+  grid-template-columns: calc(72px + 1rem) 1fr;
+  grid-template-rows: repeat(2, min-content);
+}
+
+#clan .stats .collation .data .point .header .image {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  grid-row: 1/3;
+}
+
+#clan .stats .collation .data .point .header .name {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+}
+
+#clan .stats .collation .data .point .header .value {
+  font-size: 38px;
+}
+
+#clan .stats .collation .data .point .list.roster.leaderboard {
+  counter-reset: rank;
+}
+
+#clan .stats .collation .data .point.hasIcon .list.roster.leaderboard {
+  grid-column: 1/3;
+}
+
+#clan .stats .collation .data .point .list.roster.leaderboard li.linked {
+  grid-template-columns: calc(36px + 1rem) max-content auto;
+  height: 32px;
+  background-color: transparent;
+  counter-increment: rank;
+  pointer-events: none;
+}
+
+#clan .stats .collation .data .point .list.roster.leaderboard li.linked:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+#clan .stats .collation .data .point .list.roster.leaderboard li.linked .displayName {
+  margin: 0;
+}
+
+#clan .stats .collation .data .point .list.roster.leaderboard li.linked .rank {
+  position: relative;
+  height: 32px;
+  margin: 0 1rem 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#clan .stats .collation .data .point .list.roster.leaderboard li.linked.thisIsYou .rank::before,
+#clan .stats .collation .data .point .list.roster.leaderboard li.linked.thisIsYou .rank::after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 0 1px #fff;
+  z-index: 2;
+  pointer-events: none;
+  animation: animation-thisIsYou 2.2s linear infinite;
+}
+
+#clan .stats .collation .data .point .list.roster.leaderboard li.linked.thisIsYou .rank::after {
+  animation: animation-thisIsYou 2.2s linear infinite;
+  animation-delay: 1s;
+}
+
+#clan .stats .collation .data .point .list.roster.leaderboard li.linked .rank .value::before {
+  content: counter(rank);
+}
+
+#clan .stats .collation .data .point .list.roster.leaderboard li .icon.dl {
+  opacity: 1;
+}
+
+#clan .stats .collation .data .point .list.roster.leaderboard li.linked .stat {
+  text-align: right;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.flair-gambit {
+  position: fixed;
+  right: -10vw;
+  top: calc(50vh - 55vw / 2);
+  width: 55vw;
+  height: 55vw;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fade-in-logo-feature 7s linear forwards, rotate-logo-feature 130s linear infinite reverse;
+}
+
+.flair-gambit .destiny-gambit_dazzle {
+  position: absolute;
+  opacity: 0.1;
+}
+
+.flair-gambit .l1 {
+  font-size: 55vw;
+}
+
+.flair-gambit .l2 {
+  font-size: 50vw;
+}
+
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 600px) {
+  #clan .stats {
+    padding: 3rem 2rem 2rem;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+
+  #clan .stats .collation .data {
+    grid-template-columns: 1fr;
+  }
+
+  #clan .stats .collation .data .point .header .value {
+    font-size: 28px;
+  }
+
+  .flair-gambit {
+    right: -30vh;
+    top: calc(50vh - 70vh / 2);
+    width: 70vh;
+    height: 70vh;
+  }
+
+  .flair-gambit .l1 {
+    font-size: 70vh;
+  }
+
+  .flair-gambit .l2 {
+    font-size: 65vh;
+  }
+}

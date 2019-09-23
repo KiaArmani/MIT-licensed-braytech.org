@@ -1,0 +1,44 @@
+#notification-app {
+  position: relative;
+  z-index: 23;
+  width: 100%;
+  height: 3rem;
+  padding: 0 3rem;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffeb3b;
+  color: #000;
+  font-size: 14px;
+}
+
+#notification-app div strong {
+  margin: 0 1rem 0 0;
+}
+
+#notification-app div div {
+  display: inline-block;
+}
+
+@media screen and (max-width: 1200px) {
+  #notification-app {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #notification-app {
+    height: unset;
+    padding: 1rem 2rem;
+  }
+
+  #notification-app div strong {
+    margin: 0 0 0.5rem 0;
+    display: block;
+  }
+
+  #notification-app div div {
+    display: block;
+  }
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "8gwz1qy4c8580m9o6qqxw5",
+    "date": "2019-05-28T17:00:00.000Z",
+    "expiry": 604800000,
+    "showOnce": true,
+    "displayProperties": {
+      "name": "G'day mate",
+      "description": "So, this is new, yep. I've built a component through which to annoy you all through direct messages. It might seem familiar, and that's intentional. This is a measured test.\n\nFollow me on Twitter @justrealmilk if you're feelin' it.\n\n—Thanks for using Braytech!"
+    }
+  },
+  {
+    "id": "1aux23y1wt3j14bvdmpeci",
+    "date": "2019-06-04T17:00:00.000Z",
+    "expiry": 1209600000,
+    "showOnce": true,
+    "displayProperties": {
+      "name": "Season of Opulence",
+      "image": "/static/images/notifications/SoO.jpg",
+      "description": "This Season, Emperor Calus beckons Guardians to prove their worth by pitting them against foes in his Menagerie. He'll send Guardians on treasure hunts throughout the system to unlock the power of the Chalice of Opulence—upgrades that allow you to choose the type of gear you earn.\n\n_Tend to your Imperial summons immediatey._"
+    }
+  }
+]

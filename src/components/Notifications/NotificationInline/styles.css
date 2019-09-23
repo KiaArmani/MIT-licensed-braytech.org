@@ -1,0 +1,29 @@
+
+.notification-inline {
+  padding: 1rem;
+  margin: 0 0 2rem;
+  background-color: rgba(123, 220, 193, 0.2);
+  box-shadow: inset 0 0 0 2px #7bdcc1;
+}
+
+.notification-inline .description {
+  color: rgba(255, 255, 255, 0.6);
+  margin: 10px 0 0;
+  padding: 10px 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.notification-inline.info {
+  background-color: rgba(187, 187, 187, 0.2);
+  box-shadow: inset 0 0 0 2px #bbbbbb;
+}
+
+.notification-inline.error {
+  background-color: rgba(244, 67, 54, 0.2);
+  box-shadow: inset 0 0 0 2px #F44336;
+}
+
+
+@media screen and (max-width: 600px) {
+  
+}

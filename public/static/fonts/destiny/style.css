@@ -1,0 +1,1074 @@
+@font-face {
+  font-family: 'destiny';
+  src: url('destiny.woff?pmi42h') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="destiny-"], [class*=" destiny-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'destiny' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.destiny-recovery:before {
+  content: "\e9e3";
+}
+.destiny-resilience:before {
+  content: "\e9e4";
+}
+.destiny-mobility:before {
+  content: "\e9f0";
+}
+.destiny-arrow_left:before {
+  content: "\e995";
+}
+.destiny-arrow_right:before {
+  content: "\e9ec";
+}
+.destiny-external:before {
+  content: "\e9eb";
+}
+.destiny-dim:before {
+  content: "\e9ea";
+}
+.destiny-destiny-sets:before {
+  content: "\e9e9";
+}
+.destiny-arrow:before {
+  content: "\e9e0";
+}
+.destiny-tracked-triumph_lines:before {
+  content: "\e9e6";
+}
+.destiny-tracked-triumph_circle:before {
+  content: "\e9e7";
+}
+.destiny-tracked-triumph_bg:before {
+  content: "\e9e8";
+}
+.destiny-trapped_in_amber:before {
+  content: "\e9ef";
+}
+.destiny-forsaken_prince:before {
+  content: "\e9e5";
+}
+.destiny-inspect_dazzle_2:before {
+  content: "\e9e1";
+}
+.destiny-inspect_dazzle_1:before {
+  content: "\e9e2";
+}
+.destiny-settings:before {
+  content: "\e05a";
+}
+.destiny-A_Button:before {
+  content: "\e905";
+}
+.destiny-B_Button:before {
+  content: "\e907";
+}
+.destiny-X_Button:before {
+  content: "\e908";
+}
+.destiny-Y_Button:before {
+  content: "\e973";
+}
+.destiny-left_trigger:before {
+  content: "\e98c";
+}
+.destiny-right_trigger001:before {
+  content: "\e998";
+}
+.destiny-LB:before {
+  content: "\e999";
+}
+.destiny-RB:before {
+  content: "\e99e";
+}
+.destiny-Right_Click001:before {
+  content: "\e9ab";
+}
+.destiny-Right_Stick:before {
+  content: "\e9ac";
+}
+.destiny-left_click001:before {
+  content: "\e9ad";
+}
+.destiny-left_stick001:before {
+  content: "\e9ae";
+}
+.destiny-dpad_down001:before {
+  content: "\e9af";
+}
+.destiny-dpad_left001:before {
+  content: "\e9b0";
+}
+.destiny-dpad_right001:before {
+  content: "\e9b1";
+}
+.destiny-dpad_up001:before {
+  content: "\e9b2";
+}
+.destiny-menu_button:before {
+  content: "\e9b3";
+}
+.destiny-view_button:before {
+  content: "\e9b4";
+}
+.destiny-fist_of_havoc:before {
+  content: "\e9b5";
+}
+.destiny-solar_tian_super:before {
+  content: "\e9b6";
+}
+.destiny-void_shield1:before {
+  content: "\e066";
+}
+.destiny-thermal_knives1:before {
+  content: "\e068";
+}
+.destiny-arc_staff1:before {
+  content: "\e069";
+}
+.destiny-arc_beam:before {
+  content: "\e06a";
+}
+.destiny-nova_pulse:before {
+  content: "\e06b";
+}
+.destiny-golden_gun:before {
+  content: "\e9b7";
+}
+.destiny-grenade:before {
+  content: "\e9b8";
+}
+.destiny-throwing_knife:before {
+  content: "\e9b9";
+}
+.destiny-void_hunter_super:before {
+  content: "\e9ba";
+}
+.destiny-void_titan_super:before {
+  content: "\e9bb";
+}
+.destiny-arc_warlock_super:before {
+  content: "\e9bc";
+}
+.destiny-arc_drone:before {
+  content: "\e9bd";
+}
+.destiny-warlock_blade:before {
+  content: "\e9be";
+}
+.destiny-headshot:before {
+  content: "\e9bf";
+}
+.destiny-hunter_smoke:before {
+  content: "\e9c0";
+}
+.destiny-healing_sword1:before {
+  content: "\e059";
+}
+.destiny-void_blades1:before {
+  content: "\e05b";
+}
+.destiny-thermal_maul1:before {
+  content: "\e06c";
+}
+.destiny-meteor_strike1:before {
+  content: "\e05c";
+}
+.destiny-shield_artifact:before {
+  content: "\e9c1";
+}
+.destiny-hunter_staff:before {
+  content: "\e9c2";
+}
+.destiny-melee:before {
+  content: "\e9c3";
+}
+.destiny-nova_bomb:before {
+  content: "\e9c4";
+}
+.destiny-valkyrie:before {
+  content: "\e067";
+}
+.destiny-beam_weapon:before {
+  content: "\e9c5";
+}
+.destiny-bow:before {
+  content: "\e09a";
+}
+.destiny-pulse_rifle:before {
+  content: "\e9c6";
+}
+.destiny-environment_hazard:before {
+  content: "\e9c7";
+}
+.destiny-interceptor:before {
+  content: "\e9c8";
+}
+.destiny-rocket_launcher:before {
+  content: "\e9c9";
+}
+.destiny-machinegun:before {
+  content: "\e155";
+}
+.destiny-scout_rifle:before {
+  content: "\e9ca";
+}
+.destiny-shotgun:before {
+  content: "\e9cb";
+}
+.destiny-auto_rifle:before {
+  content: "\e9cc";
+}
+.destiny-shrapnel_launcher:before {
+  content: "\e9cd";
+}
+.destiny-sidearm:before {
+  content: "\e9ce";
+}
+.destiny-hand_cannon:before {
+  content: "\e9cf";
+}
+.destiny-smg:before {
+  content: "\e9d0";
+}
+.destiny-sniper_rifle:before {
+  content: "\e9d1";
+}
+.destiny-pike:before {
+  content: "\e9d2";
+}
+.destiny-grenade_launcher:before {
+  content: "\e9d3";
+}
+.destiny-fusion_rifle:before {
+  content: "\e9d4";
+}
+.destiny-cabal_rifle:before {
+  content: "\e9d5";
+}
+.destiny-guardian_tank:before {
+  content: "\e9d6";
+}
+.destiny-loader_tank:before {
+  content: "\e9d7";
+}
+.destiny-sparrow:before {
+  content: "\e9d8";
+}
+.destiny-spear_launcher:before {
+  content: "\e9d9";
+}
+.destiny-sword_heavy:before {
+  content: "\e9da";
+}
+.destiny-turret:before {
+  content: "\e9db";
+}
+.destiny-wire_rifle:before {
+  content: "\e9dc";
+}
+.destiny-road_kill:before {
+  content: "\f11a";
+}
+.destiny-ghost:before {
+  content: "\f113";
+}
+.destiny-ship:before {
+  content: "\f128";
+}
+.destiny-uniF129:before {
+  content: "\f129";
+}
+.destiny-bungie:before {
+  content: "\f133";
+}
+.destiny-uniF12C:before {
+  content: "\f12c";
+}
+.destiny-raid:before {
+  content: "\f140";
+}
+.destiny-uniF13F:before {
+  content: "\f13f";
+}
+.destiny-uniF145:before {
+  content: "\f145";
+}
+.destiny-uniF144:before {
+  content: "\f144";
+}
+.destiny-uniF14A:before {
+  content: "\f14a";
+}
+.destiny-uniF147:before {
+  content: "\f147";
+}
+.destiny-uniF148:before {
+  content: "\f148";
+}
+.destiny-uniF14C:before {
+  content: "\f14c";
+}
+.destiny-no_ghost:before {
+  content: "\f14b";
+}
+.destiny-clan_banner:before {
+  content: "\f143";
+}
+.destiny-ammo_heavy:before {
+  content: "\48";
+  color: #a981fc;
+}
+.destiny-ammo_primary:before {
+  content: "\50";
+}
+.destiny-ammo_special:before {
+  content: "\53";
+  color: #84f186;
+}
+.destiny-damage_solar:before {
+  content: "\73";
+}
+.destiny-damage_arc:before {
+  content: "\61";
+}
+.destiny-damage_void:before {
+  content: "\76";
+}
+.destiny-damage_kinetic:before {
+  content: "\6b";
+}
+.destiny-platform_pc:before {
+  content: "\34";
+}
+.destiny-platform_playstation:before {
+  content: "\32";
+}
+.destiny-platform_xbox:before {
+  content: "\31";
+}
+.destiny-power:before {
+  content: "\6c";
+}
+.destiny-ace_of_spades:before {
+  content: "\e9aa";
+}
+.destiny-srl:before {
+  content: "\e9a3";
+}
+.destiny-ghost1:before {
+  content: "\e9a4";
+}
+.destiny-gambit_hostiles:before {
+  content: "\e9a8";
+}
+.destiny-gambit_invasions:before {
+  content: "\e9a9";
+}
+.destiny-gambit_mote:before {
+  content: "\e9a5";
+}
+.destiny-gambit_bank:before {
+  content: "\e9a6";
+}
+.destiny-gambit_dazzle:before {
+  content: "\e9a7";
+}
+.destiny-gambit:before {
+  content: "\e997";
+}
+.destiny-forsaken:before {
+  content: "\e99d";
+}
+.destiny-vault_armour:before {
+  content: "\e99b";
+}
+.destiny-vault_weapons:before {
+  content: "\e99c";
+}
+.destiny-vault:before {
+  content: "\e901";
+}
+.destiny-leviathan_sun:before {
+  content: "\e96c";
+}
+.destiny-leviathan_dogs:before {
+  content: "\e97a";
+}
+.destiny-leviathan_axes:before {
+  content: "\e97b";
+}
+.destiny-leviathan_cup:before {
+  content: "\e97c";
+}
+.destiny-meditations:before {
+  content: "\e97d";
+}
+.destiny-flashpoint:before {
+  content: "\e97e";
+}
+.destiny-clan:before {
+  content: "\e97f";
+}
+.destiny-adventure2 .path1:before {
+  content: "\e982";
+  color: rgb(255, 255, 255);
+}
+.destiny-adventure2 .path2:before {
+  content: "\e98d";
+  margin-left: -1em;
+  color: rgb(230, 116, 25);
+}
+.destiny-adventure2 .path3:before {
+  content: "\e98e";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.destiny-adventure2 .path4:before {
+  content: "\e98f";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.destiny-adventure2 .path5:before {
+  content: "\e990";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.destiny-adventure2 .path6:before {
+  content: "\e991";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.destiny-adventure:before {
+  content: "\e992";
+}
+.destiny-cat_statues:before {
+  content: "\e9dd";
+}
+.destiny-ahamkara_bones:before {
+  content: "\e9df";
+}
+.destiny-corrupted_eggs:before {
+  content: "\e9de";
+}
+.destiny-lost_sectors:before {
+  content: "\e980";
+}
+.destiny-region_chests:before {
+  content: "\e981";
+}
+.destiny-lost_memory_fragments:before {
+  content: "\e904";
+}
+.destiny-sleeper_nodes:before {
+  content: "\e99a";
+}
+.destiny-gunsmith_materials:before {
+  content: "\e9a1";
+}
+.destiny-quest2 .path1:before {
+  content: "\e983";
+  color: rgb(48, 61, 161);
+}
+.destiny-quest2 .path2:before {
+  content: "\e984";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.destiny-quest2 .path3:before {
+  content: "\e985";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.destiny-quest2 .path4:before {
+  content: "\e986";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.destiny-quest2 .path5:before {
+  content: "\e987";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.destiny-quest2 .path6:before {
+  content: "\e988";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.destiny-quest:before {
+  content: "\e900";
+}
+.destiny-faction_xur2 .path1:before {
+  content: "\e974";
+  color: rgb(245, 246, 245);
+}
+.destiny-faction_xur2 .path2:before {
+  content: "\e975";
+  margin-left: -0.6953125em;
+  color: rgb(44, 75, 41);
+}
+.destiny-faction_xur2 .path3:before {
+  content: "\e976";
+  margin-left: -0.6953125em;
+  color: rgb(255, 255, 255);
+}
+.destiny-faction_xur2 .path4:before {
+  content: "\e977";
+  margin-left: -0.6953125em;
+  color: rgb(255, 255, 255);
+}
+.destiny-faction_xur2 .path5:before {
+  content: "\e978";
+  margin-left: -0.6953125em;
+  color: rgb(245, 246, 245);
+}
+.destiny-faction_xur:before {
+  content: "\e906";
+}
+.destiny-xur_ix:before {
+  content: "\e9a0";
+}
+.destiny-destiny:before {
+  content: "\e909";
+}
+.destiny-faction_ironbanner:before {
+  content: "\e993";
+}
+.destiny-faction_rally:before {
+  content: "\e994";
+}
+.destiny-faction_fwc2 .path1:before {
+  content: "\e962";
+  color: rgb(253, 253, 253);
+}
+.destiny-faction_fwc2 .path2:before {
+  content: "\e963";
+  margin-left: -1em;
+  color: rgb(253, 253, 253);
+}
+.destiny-faction_fwc2 .path3:before {
+  content: "\e964";
+  margin-left: -1em;
+  color: rgb(253, 253, 253);
+}
+.destiny-faction_fwc2 .path4:before {
+  content: "\e965";
+  margin-left: -1em;
+  color: rgb(250, 182, 90);
+}
+.destiny-faction_fwc2 .path5:before {
+  content: "\e966";
+  margin-left: -1em;
+  color: rgb(238, 76, 74);
+}
+.destiny-faction_fwc2 .path6:before {
+  content: "\e967";
+  margin-left: -1em;
+  color: rgb(250, 182, 90);
+}
+.destiny-faction_fwc2 .path7:before {
+  content: "\e968";
+  margin-left: -1em;
+  color: rgb(238, 76, 74);
+}
+.destiny-faction_fwc:before {
+  content: "\e989";
+}
+.destiny-faction_new_monarchy2:before {
+  content: "\e98a";
+  color: #9c3a3b;
+}
+.destiny-faction_new_monarchy:before {
+  content: "\e961";
+}
+.destiny-faction_red_legion:before {
+  content: "\e979";
+}
+.destiny-faction_dead_orbit2:before {
+  content: "\e98b";
+  color: #e8e8e8;
+}
+.destiny-faction_dead_orbit:before {
+  content: "\e960";
+}
+.destiny-fallen_spider:before {
+  content: "\e99f";
+}
+.destiny-uniF108:before {
+  content: "\f108";
+}
+.destiny-uniF126:before {
+  content: "\f126";
+}
+.destiny-uniF106:before {
+  content: "\f106";
+}
+.destiny-uniF109:before {
+  content: "\f109";
+}
+.destiny-uniF107:before {
+  content: "\f107";
+}
+.destiny-fallen_dusk:before {
+  content: "\e96d";
+}
+.destiny-fallen_exile:before {
+  content: "\e90e";
+}
+.destiny-uniF10F:before {
+  content: "\f10f";
+}
+.destiny-uniF10A:before {
+  content: "\f10a";
+}
+.destiny-faction_red_legion1:before {
+  content: "\f149";
+}
+.destiny-fallen_winter:before {
+  content: "\e90f";
+}
+.destiny-fallen_devils:before {
+  content: "\e910";
+}
+.destiny-fallen_kings:before {
+  content: "\e911";
+}
+.destiny-fallen_wolves:before {
+  content: "\e912";
+}
+.destiny-fallen_judgement:before {
+  content: "\e913";
+}
+.destiny-faction_queens_wrath:before {
+  content: "\e914";
+}
+.destiny-faction_osiris:before {
+  content: "\e96f";
+}
+.destiny-faction_thenine:before {
+  content: "\e96e";
+}
+.destiny-warmind:before {
+  content: "\e918";
+}
+.destiny-clovis_bray_device:before {
+  content: "\e96b";
+}
+.destiny-clovis_bray:before {
+  content: "\e96a";
+}
+.destiny-lost_prophecies:before {
+  content: "\e970";
+}
+.destiny-cryptarch:before {
+  content: "\e919";
+}
+.destiny-raid_alt:before {
+  content: "\e95f";
+}
+.destiny-the_dawning:before {
+  content: "\e902";
+}
+.destiny-crimson_days:before {
+  content: "\e903";
+}
+.destiny-strike:before {
+  content: "\e996";
+}
+.destiny-patrol:before {
+  content: "\e9a2";
+}
+.destiny-ishtar:before {
+  content: "\e90d";
+}
+.destiny-faction_crucible:before {
+  content: "\e915";
+}
+.destiny-faction_crucible_valor:before {
+  content: "\e971";
+}
+.destiny-faction_crucible_glory:before {
+  content: "\e972";
+}
+.destiny-team_alpha_alt:before {
+  content: "\e9ed";
+}
+.destiny-team_alpha:before {
+  content: "\e916";
+}
+.destiny-team_bravo_alt:before {
+  content: "\e9ee";
+}
+.destiny-team_bravo:before {
+  content: "\e917";
+}
+.destiny-faction_vanguard:before {
+  content: "\e969";
+}
+.destiny-cosmodrome .path1:before {
+  content: "\e91a";
+  color: rgb(254, 254, 253);
+}
+.destiny-cosmodrome .path2:before {
+  content: "\e91b";
+  margin-left: -1em;
+  color: rgb(210, 98, 42);
+}
+.destiny-cosmodrome .path3:before {
+  content: "\e91c";
+  margin-left: -1em;
+  color: rgb(139, 181, 148);
+}
+.destiny-cosmodrome .path4:before {
+  content: "\e91d";
+  margin-left: -1em;
+  color: rgb(254, 253, 253);
+}
+.destiny-cosmodrome .path5:before {
+  content: "\e91e";
+  margin-left: -1em;
+  color: rgb(254, 253, 253);
+}
+.destiny-cosmodrome .path6:before {
+  content: "\e91f";
+  margin-left: -1em;
+  color: rgb(254, 253, 253);
+}
+.destiny-cosmodrome .path7:before {
+  content: "\e920";
+  margin-left: -1em;
+  color: rgb(254, 254, 253);
+}
+.destiny-cosmodrome .path8:before {
+  content: "\e921";
+  margin-left: -1em;
+  color: rgb(253, 247, 244);
+}
+.destiny-cosmodrome .path9:before {
+  content: "\e922";
+  margin-left: -1em;
+  color: rgb(253, 247, 244);
+}
+.destiny-cosmodrome .path10:before {
+  content: "\e923";
+  margin-left: -1em;
+  color: rgb(253, 247, 244);
+}
+.destiny-cosmodrome .path11:before {
+  content: "\e924";
+  margin-left: -1em;
+  color: rgb(254, 253, 253);
+}
+.destiny-cosmodrome .path12:before {
+  content: "\e925";
+  margin-left: -1em;
+  color: rgb(253, 247, 244);
+}
+.destiny-cosmodrome .path13:before {
+  content: "\e926";
+  margin-left: -1em;
+  color: rgb(253, 247, 244);
+}
+.destiny-cosmodrome .path14:before {
+  content: "\e927";
+  margin-left: -1em;
+  color: rgb(253, 247, 244);
+}
+.destiny-cosmodrome .path15:before {
+  content: "\e928";
+  margin-left: -1em;
+  color: rgb(253, 247, 244);
+}
+.destiny-cosmodrome .path16:before {
+  content: "\e929";
+  margin-left: -1em;
+  color: rgb(253, 247, 244);
+}
+.destiny-cosmodrome .path17:before {
+  content: "\e92a";
+  margin-left: -1em;
+  color: rgb(253, 247, 244);
+}
+.destiny-cosmodrome .path18:before {
+  content: "\e92b";
+  margin-left: -1em;
+  color: rgb(254, 253, 253);
+}
+.destiny-cosmodrome .path19:before {
+  content: "\e92c";
+  margin-left: -1em;
+  color: rgb(253, 247, 244);
+}
+.destiny-cosmodrome .path20:before {
+  content: "\e92d";
+  margin-left: -1em;
+  color: rgb(253, 247, 244);
+}
+.destiny-cosmodrome .path21:before {
+  content: "\e92e";
+  margin-left: -1em;
+  color: rgb(253, 247, 244);
+}
+.destiny-cosmodrome .path22:before {
+  content: "\e92f";
+  margin-left: -1em;
+  color: rgb(253, 247, 244);
+}
+.destiny-cosmodrome .path23:before {
+  content: "\e930";
+  margin-left: -1em;
+  color: rgb(254, 253, 253);
+}
+.destiny-cosmodrome .path24:before {
+  content: "\e931";
+  margin-left: -1em;
+  color: rgb(253, 247, 244);
+}
+.destiny-cosmodrome .path25:before {
+  content: "\e932";
+  margin-left: -1em;
+  color: rgb(254, 253, 253);
+}
+.destiny-cosmodrome .path26:before {
+  content: "\e933";
+  margin-left: -1em;
+  color: rgb(253, 247, 244);
+}
+.destiny-cosmodrome .path27:before {
+  content: "\e934";
+  margin-left: -1em;
+  color: rgb(253, 247, 244);
+}
+.destiny-cosmodrome .path28:before {
+  content: "\e935";
+  margin-left: -1em;
+  color: rgb(253, 247, 244);
+}
+.destiny-cosmodrome .path29:before {
+  content: "\e936";
+  margin-left: -1em;
+  color: rgb(253, 247, 244);
+}
+.destiny-cosmodrome .path30:before {
+  content: "\e937";
+  margin-left: -1em;
+  color: rgb(253, 247, 244);
+}
+.destiny-cosmodrome .path31:before {
+  content: "\e938";
+  margin-left: -1em;
+  color: rgb(254, 253, 253);
+}
+.destiny-cosmodrome .path32:before {
+  content: "\e939";
+  margin-left: -1em;
+  color: rgb(253, 247, 244);
+}
+.destiny-cosmodrome .path33:before {
+  content: "\e93a";
+  margin-left: -1em;
+  color: rgb(253, 247, 244);
+}
+.destiny-cosmodrome .path34:before {
+  content: "\e93b";
+  margin-left: -1em;
+  color: rgb(253, 247, 244);
+}
+.destiny-cosmodrome .path35:before {
+  content: "\e93c";
+  margin-left: -1em;
+  color: rgb(253, 247, 244);
+}
+.destiny-cosmodrome .path36:before {
+  content: "\e93d";
+  margin-left: -1em;
+  color: rgb(254, 253, 253);
+}
+.destiny-cosmodrome .path37:before {
+  content: "\e93e";
+  margin-left: -1em;
+  color: rgb(253, 247, 244);
+}
+.destiny-cosmodrome .path38:before {
+  content: "\e93f";
+  margin-left: -1em;
+  color: rgb(254, 253, 253);
+}
+.destiny-cosmodrome .path39:before {
+  content: "\e940";
+  margin-left: -1em;
+  color: rgb(253, 247, 244);
+}
+.destiny-cosmodrome .path40:before {
+  content: "\e941";
+  margin-left: -1em;
+  color: rgb(253, 247, 244);
+}
+.destiny-cosmodrome .path41:before {
+  content: "\e942";
+  margin-left: -1em;
+  color: rgb(253, 247, 244);
+}
+.destiny-cosmodrome .path42:before {
+  content: "\e943";
+  margin-left: -1em;
+  color: rgb(254, 253, 253);
+}
+.destiny-cosmodrome .path43:before {
+  content: "\e944";
+  margin-left: -1em;
+  color: rgb(253, 247, 244);
+}
+.destiny-cosmodrome .path44:before {
+  content: "\e945";
+  margin-left: -1em;
+  color: rgb(253, 247, 244);
+}
+.destiny-cosmodrome .path45:before {
+  content: "\e946";
+  margin-left: -1em;
+  color: rgb(210, 98, 42);
+}
+.destiny-cosmodrome .path46:before {
+  content: "\e947";
+  margin-left: -1em;
+  color: rgb(210, 98, 42);
+}
+.destiny-cosmodrome .path47:before {
+  content: "\e948";
+  margin-left: -1em;
+  color: rgb(210, 98, 42);
+}
+.destiny-cosmodrome .path48:before {
+  content: "\e949";
+  margin-left: -1em;
+  color: rgb(210, 98, 42);
+}
+.destiny-cosmodrome .path49:before {
+  content: "\e94a";
+  margin-left: -1em;
+  color: rgb(210, 98, 42);
+}
+.destiny-cosmodrome .path50:before {
+  content: "\e94b";
+  margin-left: -1em;
+  color: rgb(210, 98, 42);
+}
+.destiny-cosmodrome .path51:before {
+  content: "\e94c";
+  margin-left: -1em;
+  color: rgb(210, 98, 42);
+}
+.destiny-cosmodrome .path52:before {
+  content: "\e94d";
+  margin-left: -1em;
+  color: rgb(210, 98, 42);
+}
+.destiny-cosmodrome .path53:before {
+  content: "\e94e";
+  margin-left: -1em;
+  color: rgb(210, 98, 42);
+}
+.destiny-cosmodrome .path54:before {
+  content: "\e94f";
+  margin-left: -1em;
+  color: rgb(210, 98, 42);
+}
+.destiny-cosmodrome .path55:before {
+  content: "\e950";
+  margin-left: -1em;
+  color: rgb(210, 98, 42);
+}
+.destiny-cosmodrome .path56:before {
+  content: "\e951";
+  margin-left: -1em;
+  color: rgb(210, 98, 42);
+}
+.destiny-cosmodrome .path57:before {
+  content: "\e952";
+  margin-left: -1em;
+  color: rgb(210, 98, 42);
+}
+.destiny-cosmodrome .path58:before {
+  content: "\e953";
+  margin-left: -1em;
+  color: rgb(210, 98, 42);
+}
+.destiny-cosmodrome .path59:before {
+  content: "\e954";
+  margin-left: -1em;
+  color: rgb(210, 98, 42);
+}
+.destiny-cosmodrome .path60:before {
+  content: "\e955";
+  margin-left: -1em;
+  color: rgb(210, 98, 42);
+}
+.destiny-cosmodrome .path61:before {
+  content: "\e956";
+  margin-left: -1em;
+  color: rgb(210, 98, 42);
+}
+.destiny-cosmodrome .path62:before {
+  content: "\e957";
+  margin-left: -1em;
+  color: rgb(210, 98, 42);
+}
+.destiny-cosmodrome .path63:before {
+  content: "\e958";
+  margin-left: -1em;
+  color: rgb(210, 98, 42);
+}
+.destiny-cosmodrome .path64:before {
+  content: "\e959";
+  margin-left: -1em;
+  color: rgb(210, 98, 42);
+}
+.destiny-cosmodrome .path65:before {
+  content: "\e95a";
+  margin-left: -1em;
+  color: rgb(210, 98, 42);
+}
+.destiny-cosmodrome .path66:before {
+  content: "\e95b";
+  margin-left: -1em;
+  color: rgb(210, 98, 42);
+}
+.destiny-cosmodrome .path67:before {
+  content: "\e95c";
+  margin-left: -1em;
+  color: rgb(210, 98, 42);
+}
+.destiny-cosmodrome .path68:before {
+  content: "\e95d";
+  margin-left: -1em;
+  color: rgb(210, 98, 42);
+}
+.destiny-cosmodrome .path69:before {
+  content: "\e95e";
+  margin-left: -1em;
+  color: rgb(210, 98, 42);
+}
+.destiny-class_titan:before {
+  content: "\e90a";
+}
+.destiny-class_hunter:before {
+  content: "\e90b";
+}
+.destiny-class_warlock:before {
+  content: "\e90c";
+}

@@ -1,0 +1,39 @@
+#leaderboards {
+  padding: 0;
+  display: grid;
+}
+
+#leaderboards .module.head .content .text p {
+  max-width: 500px;
+  font-size: 16px;
+}
+
+#leaderboards .page-header .name::after {
+  content: 'BETA';
+  position: absolute;
+  font-size: 14px;
+}
+
+
+
+
+
+@media screen and (max-width: 1280px) {
+
+  
+
+}
+
+@media screen and (max-width: 1024px) {
+
+  
+
+}
+
+@media screen and (max-width: 600px) {
+
+  #leaderboards .module.head .content .text p {
+    font-size: 14px;
+  }
+
+}

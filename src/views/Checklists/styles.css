@@ -1,0 +1,232 @@
+#checklists {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  padding: 4rem 3rem 3rem;
+  grid-gap: 3rem;
+}
+
+#checklists .views .list li {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0);
+}
+
+#checklists .views .list li::before {
+  box-shadow: inset 0 0 0 1px rgba(214, 214, 214, 0.4);
+}
+
+#checklists .views .list li.linked:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  z-index: 2;
+}
+
+#checklists .views .list li a [class^="destiny-"] {
+  display: none;
+}
+
+#checklists .views .list li a.active {
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 0 0 1px rgba(214, 214, 214, 1);
+  color: #fff;
+}
+
+#checklists .views .list li a:hover {
+  color: #fff;
+}
+
+#checklists .lists {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 3rem;
+}
+
+#checklists .lists.col-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#checklists .lists.col-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#checklists .lists.col-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#checklists .lists.col-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+#checklists .lists .col .head {
+  margin: 0 0 3rem;
+}
+
+#checklists .lists .col .head h4 {
+  margin: 0 0 0.5rem;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#checklists .lists .col .head .binding {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  height: 3rem;
+}
+
+#checklists .lists .col .info {
+  
+}
+
+#checklists .lists .col .info .text {
+  font-style: italic;
+  letter-spacing: 1px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+#checklists .lists .list li {
+  position: relative;
+  padding: 0;
+  margin: 0 0 10px;
+  line-height: 1.4;
+  font-size: 14px;
+  align-items: flex-start;
+  height: unset;
+}
+
+#checklists .lists .list li .state {
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 4px 18px 0 3px;
+  flex-shrink: 0;
+  transition: background-color 0.25s;
+}
+
+#checklists .lists .list li .state::before {
+  content: ' ';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+#checklists .lists .list li .state.completed {
+  background-color: #78ba82;
+}
+
+#checklists .lists .list li .state.completed + .text {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#checklists .lists .list li .text {
+  flex-basis: calc(100% - 2.8rem - 10px);
+}
+
+#checklists .lists .list li .text p {
+  margin: 0 0 4px;
+}
+
+#checklists .lists .list li .text p:last-child {
+  margin: 0;
+}
+
+#checklists .lists .list li .lowlines {
+  flex-basis: 2rem;
+  position: relative;
+  text-align: right;
+}
+
+#checklists .lists .list li .lowlines a {
+  position: relative;
+  width: inherit;
+  height: inherit;
+  padding: 0 0.4rem;
+  opacity: 0;
+}
+
+#checklists .lists .list li .lowlines a span {
+  line-height: 1.3;
+  font-size: 16px;
+}
+
+#checklists .lists .list li:hover .lowlines a {
+  opacity: 0.6;
+}
+
+#checklists .lists .list li:hover .lowlines a:hover {
+  opacity: 1;
+}
+
+#checklists .lists .list.single-line li {
+  align-items: center;
+}
+
+#checklists .lists .list.single-line li .state {
+  margin: 0 1rem 0 3px;
+}
+
+@media screen and (max-width: 1200px) {
+  #checklists .lists .list li .text {
+    flex-basis: calc(100% - 1rem - 10px);
+  }
+
+  #checklists .lists .list li .lowlines a {
+    opacity: 0.8;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #checklists {
+    grid-template-columns: 1fr;
+    padding: 3rem 2rem 2rem;
+    grid-gap: 2rem;
+  }
+
+  #checklists .views ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 6px;
+  }
+
+  #checklists .views ul li {
+    margin: 0;
+  }
+
+  #checklists .views .list li a {
+    justify-content: center;
+  }
+
+  #checklists .views .list li a [class^="destiny-"] {
+    display: initial;
+    font-size: 20px;
+  }
+
+  #checklists .views .list li a .name {
+    display: none;
+  }
+
+  #checklists .lists .col .head {
+    margin: 0 0 2rem;
+  }
+
+  #checklists .lists .col .head .binding {
+    height: initial;
+    margin: 0 0 1rem;
+  }
+}
+
+
+
+#checklists.dark-mode .lists .col .info {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+#checklists.dark-mode .lists .col .info .text {
+  color: rgba(255, 255, 255, 0.15);
+}

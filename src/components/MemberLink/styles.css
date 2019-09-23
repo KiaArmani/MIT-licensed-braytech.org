@@ -1,0 +1,636 @@
+.member-link {
+  position: relative;
+  width: 100%;
+  max-width: 270px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  cursor: default;
+  transition: color 0.25s, background-color 0.25s, box-shadow 0.25s;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.member-link::before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 1px rgba(214, 214, 214, 0);
+  transition: box-shadow 0.25s, background-color 0.25s;
+}
+
+.member-link::after {
+  content: ' ';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: 3;
+  pointer-events: none;
+  box-shadow: 0 0 0 2px rgba(214, 214, 214, 0);
+  transition: box-shadow 0.25s;
+}
+
+.member-link > .user-flair {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  display: grid;
+  justify-content: right;
+  align-content: center;
+  overflow: hidden;
+  opacity: 0.4;
+}
+
+.member-link > .user-flair i {
+  font-size: 48px;
+  padding: 0 30px 0 0;
+  color: #fff;
+}
+
+.member-link > .user-flair.me i {
+  font-size: 72px;
+  padding-top: 6px;
+}
+
+.member-link > .user-flair.one-hundo {
+  opacity: 0.6;
+}
+
+.member-link > .user-flair.one-hundo i {
+  color: #f12818;
+}
+
+.member-link .emblem {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.1);
+  height: 38px;
+  width: 38px;
+}
+
+.member-link .emblem .image {
+  background-size: cover;
+}
+
+.member-link .displayName {
+  left: calc(38px + 16px);
+  font-size: 16px;  
+  position: absolute;
+  white-space: nowrap;
+  width: calc(100% - (38px + 16px + 16px));
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.member-link:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 1);
+  z-index: 2;
+}
+
+.member-link:hover::before {
+  box-shadow: inset 0 0 0 1px #d6d6d6;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.member-link:hover::after {
+  box-shadow: 0 0 0 2px #d6d6d6;
+}
+
+.member-link a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  z-index: 2;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+
+  .member-link {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .member-link .displayName {
+    font-size: 14px;
+  }
+
+  .member-link > .user-flair {
+    opacity: 0.2;
+  }
+
+  .member-link > .user-flair i {
+    padding-right: 4px;
+  }
+
+}
+
+
+
+
+
+
+
+
+#member-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 21;
+  display: grid;
+  align-content: center;
+  -webkit-overflow-scrolling: touch;
+  background-color: rgba(122, 122, 122, 0.4);
+}
+
+.wrapper.dark-mode #member-overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+html.backdropfilter #member-overlay {
+  background-color: rgba(122, 122, 122, 0.6);
+}
+
+html.backdropfilter .wrapper.dark-mode #member-overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#member-overlay .wrapper-outer {
+  position: relative;
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.2);
+}
+
+#member-overlay .background .border-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1rem;
+  border-top: 2px solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(180, 180, 180, 0.6);
+}
+
+#member-overlay .background .acrylic {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 1rem);
+  background-color: rgba(122, 122, 122, 0.8);
+}
+
+.wrapper.dark-mode #member-overlay .background .acrylic {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+html.backdropfilter #member-overlay .background .border-top {
+  border-top: 2px solid rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(7px) brightness(1.2) saturate(1.2);
+}
+
+html.backdropfilter #member-overlay .background .acrylic {
+  background-color: rgba(136, 136, 136, 0.4);
+  backdrop-filter: blur(7px) brightness(1.1) saturate(1.2);
+}
+
+html.backdropfilter .wrapper.dark-mode #member-overlay .background .acrylic {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(7px) brightness(1.2) saturate(1.2);
+}
+
+#member-overlay .wrapper-inner {
+  position: relative;
+  padding: 3rem;
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 474px 1fr;
+  grid-gap: 3rem;
+  font-size: 14px;
+}
+
+#member-overlay .wrapper-inner .sub-header {
+  border-bottom: none;
+  padding: 0;
+}
+
+#member-overlay .wrapper-inner .sub-header::after {
+  content: none;
+}
+
+#member-overlay .wrapper-inner .sub-header ~ .sub-header {
+  margin: 2rem 0 1rem;
+}
+
+#member-overlay .wrapper-inner .head {
+  margin: 0 0 2rem;
+  padding: 52px 0 0;
+  position: relative;
+}
+
+#member-overlay .wrapper-inner .head .displayName {
+  position: absolute;
+  font-size: 48px;
+  line-height: 60px;
+  margin: 0 0 14px;
+  top: -9px;
+  left: 0;  
+  width: 100%;
+  white-space: nowrap;
+  mask: linear-gradient(to right, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0));
+}
+
+#member-overlay .wrapper-inner .head .groupName {
+  font-size: 16px;
+  line-height: 14px;
+  margin: 0 0 1.5rem;
+}
+
+#member-overlay .wrapper-inner .stamps {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 38px);
+  grid-gap: 3px;
+}
+
+#member-overlay .wrapper-inner .stamps div i {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem 0 0;
+  color: #fff;
+  font-size: 18px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#member-overlay .wrapper-inner .stamps div i.destiny-platform_xbox {
+  background-color: #4CAF50;
+}
+
+#member-overlay .wrapper-inner .stamps div i.destiny-platform_pc {
+  background-color: #2196F3;
+}
+
+#member-overlay .wrapper-inner .stamps div i.destiny-platform_playstation {
+  background-color: #3F51B5;
+}
+
+#member-overlay .wrapper-inner .stamps div i.destiny-clovis_bray_device {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#member-overlay .wrapper-inner .stamps div i.destiny-clovis_bray_device.one-hundo {
+  background-color: rgb(241, 40, 24);
+}
+
+#member-overlay .wrapper-inner .basics {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+#member-overlay .wrapper-inner .basics > div {
+  position: relative;
+  font-size: 14px;
+  line-height: 10px;
+}
+
+#member-overlay .wrapper-inner .basics > div:last-child {
+  margin: 0;
+}
+
+#member-overlay .wrapper-inner .basics div .name {
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 1.4;
+}
+
+#member-overlay .wrapper-inner .basics div .value {
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+
+#member-overlay .wrapper-inner .ranks {
+  margin: 0 0 1rem;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#member-overlay .wrapper-inner .ranks.loading,
+#member-overlay .wrapper-inner .ranks.error {
+  grid-template-columns: 1fr;
+}
+
+#member-overlay .wrapper-inner .ranks.error {
+  margin: 2rem 0 3rem;
+  font-style: italic;
+  letter-spacing: 1px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.4);
+  display: grid;
+  justify-items: center;
+}
+
+#member-overlay .wrapper-inner .ranks > div {
+  position: relative;
+  font-size: 14px;
+  line-height: 10px;
+}
+
+#member-overlay .wrapper-inner .ranks div .name {
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 1.4;
+}
+
+#member-overlay .wrapper-inner .ranks div .value {
+  font-size: 38px;
+  line-height: 34px;
+  margin: 0 0 8px;
+}
+
+#member-overlay .wrapper-inner .characters .char {
+  position: relative;
+}
+
+#member-overlay .wrapper-inner .characters .button {
+  max-width: unset;
+}
+
+#member-overlay .wrapper-inner .characters [class^="destiny-"] {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #fff;
+  background-color: rgb(75, 127, 149);
+}
+
+#member-overlay .wrapper-inner .characters .destiny-class_hunter {
+  background-color: rgb(127, 98, 76);
+}
+
+#member-overlay .wrapper-inner .characters .destiny-class_warlock {
+  background-color: rgb(42, 120, 99);
+}
+
+#member-overlay .wrapper-inner .characters .text {
+  font-size: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#member-overlay .wrapper-inner .characters .text div:last-child > span {
+  width: 42px;
+  display: inline-block;
+  text-align: right;
+}
+
+#member-overlay .wrapper-inner .characters .text div:last-child span:last-child span {
+  position: relative;
+  font-weight: 500;
+  color: #2ed1c9;
+}
+
+#member-overlay .wrapper-inner .characters .text div:last-child span:last-child span::before {
+  content: 'l';
+  position: absolute;
+  top: 5px;
+  left: -10px;
+  font-family: 'destiny' !important;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: normal;
+  font-feature-settings: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#member-overlay .wrapper-inner .characters .char .title {
+  --titleColor: rgb(218, 103, 207);
+  margin: 10px 0 0 0;
+  position: relative;
+  padding: 4px 8px 4px 54px;
+  background-color: rgba(218, 103, 207, 0.1);
+  color: var(--titleColor);
+  font-weight: 500;
+  font-style: italic;
+}
+
+.wrapper.light-mode #member-overlay .wrapper-inner .characters .char .title {
+  /* color: rgba(255, 255, 255, 0.8); */
+}
+
+#member-overlay .wrapper-inner .characters .char .title::before,
+#member-overlay .wrapper-inner .characters .char .title::after {
+  content: ' ';
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--titleColor);
+  opacity: 0.4;
+}
+
+#member-overlay .wrapper-inner .characters .char .title::after {
+  top: unset;
+  bottom: -4px;
+}
+
+#member-overlay .wrapper-inner .characters .char .state {
+  margin: 10px 0 20px 54px;
+}
+
+#member-overlay .wrapper-inner .characters .char .title ~ .state {
+  margin: 15px 0 20px 54px;
+}
+
+#member-overlay .wrapper-inner .characters .char:last-child .state {
+  margin-bottom:  0;
+}
+
+#member-overlay .wrapper-inner .characters .char .state div {
+  display: inline;
+}
+
+#member-overlay .wrapper-inner .characters .char .state div::after {
+  content: ' ';
+}
+
+#member-overlay .wrapper-inner .characters .char .state .activity {
+  display: block;
+  margin: 0 0 2px;
+}
+
+#member-overlay .wrapper-inner .characters .char .state .time-before,
+#member-overlay .wrapper-inner .characters .char .state time {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+
+
+#member-overlay .wrapper-inner .list.progress-bars > li {
+  height: unset;
+}
+
+#member-overlay .wrapper-inner .list.progress-bars .progress-bar {
+  width: 100%;
+}
+
+#member-overlay .wrapper-inner .list.progress-bars .progress-bar .bar .fill {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#member-overlay .wrapper-inner .list.progress-bars.seals .progress-bar.complete .bar .fill {
+  background-color: #7b3274;
+}
+
+#member-overlay .wrapper-inner .list.progress-bars .progress-bar.valor .bar .fill {
+  background-color: #d08039;
+}
+
+#member-overlay .wrapper-inner .list.progress-bars .progress-bar.glory .bar .fill {
+  background-color: #bd2f28;
+}
+
+#member-overlay .wrapper-inner .list.progress-bars .progress-bar.infamy .bar .fill {
+  background-color: #269676;
+}
+
+.wrapper.dark-mode #member-overlay.error .background .border-top,
+#member-overlay.error .background .border-top,
+html.backdropfilter #member-overlay.error .background .border-top,
+html.backdropfilter .wrapper.dark-mode #member-overlay.error .background .border-top {
+  background-color: rgb(220, 81, 59);
+}
+
+#member-overlay.error .wrapper-inner {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 0;
+  padding: 1rem 0 0;
+  max-width: unset;
+}
+
+#member-overlay.error .wrapper-inner > div {
+  padding: 2rem;
+}
+
+#member-overlay.error .wrapper-inner > div:first-child {
+  display: grid;
+  justify-content: right;
+  background-image: linear-gradient(to right, rgba(220, 81, 59, 0), rgba(220, 81, 59, 0.2));
+}
+
+#member-overlay.error .wrapper-inner div .icon {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+#member-overlay.error .wrapper-inner .text .name {
+  font-size: 24px;
+  line-height: 19px;
+  margin: 0 0 21px;
+}
+
+#member-overlay.error .wrapper-inner .text .description {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#member-overlay .sticky-nav-inner {
+  padding: 3rem;
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+  #member-overlay {
+    display: block;
+    overflow-y: scroll;
+  }
+
+  #member-overlay .wrapper-inner {
+    padding: 3rem 2rem 2rem;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+
+  #member-overlay .wrapper-inner .ranks {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #member-overlay.error .wrapper-inner {
+    grid-template-columns: min-content auto;
+    padding: 1rem 0 0;
+  }
+  
+  #member-overlay.error .wrapper-inner > div {
+    padding: 1rem;
+  }
+
+  #member-overlay.error .wrapper-inner div .icon {
+    position: relative;
+    height: 50px;
+    width: 50px;
+  }
+
+  #member-overlay.error .wrapper-inner .text .name {
+    font-size: 18px;
+    line-height: 14px;
+    margin: 0 0 20px;
+  }
+  
+  #member-overlay.error .wrapper-inner .text .description {
+    font-size: 14px;
+  } 
+
+  #member-overlay .sticky-nav-inner {
+    padding: unset;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

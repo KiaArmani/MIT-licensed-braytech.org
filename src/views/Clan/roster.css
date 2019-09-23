@@ -1,0 +1,38 @@
+#clan > .roster {
+  display: grid;
+  padding: 4rem 3rem 3rem;
+  grid-gap: 3rem;
+  grid-template-columns: 1.6fr 5.6fr;
+}
+
+#clan > .roster > .members {
+  position: relative;
+}
+
+#clan > .roster > .members .liteRefresh {
+  position: absolute;
+  top: 0;
+  left: -1.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+  #clan > .roster {
+    padding: 3rem 2rem 2rem;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+
+  #clan > .roster .summary {
+    max-width: 24rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  
+
+  #clan > .roster > .members .liteRefresh {
+    position: absolute;
+    left: 0;
+    top: -2.5rem;
+  }
+}
